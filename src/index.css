@@ -1,0 +1,47 @@
+:root {
+  --white: #fff;
+  --black: #182339;
+  --primary: #61ecbc;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-image: url('../public/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 60rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.title{
+  font-size: 4rem;
+  color: var(--white);
+  line-height: 3rem;
+  margin-top: 5rem;
+}
+
+.title span {
+  display: block;
+  font-weight: 900;
+  font-size: 5rem;
+  color: var(--primary);
+}
+
+.content {
+  background-color: var(--white);
+  margin-top: 5rem;
+  padding: 6rem 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
