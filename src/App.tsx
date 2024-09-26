@@ -1,7 +1,15 @@
+import { useEffect } from "react";
 import CriptoSearchForm from "./components/CriptoSearchForm"
+import { useCripto } from "./hooks/useCripto"
 
 function App() {
 
+  const { fetchCrypto } = useCripto();
+
+  //Se ejecuta la funcion apenas cargue la aplicacion
+  useEffect(()=> {
+    fetchCrypto()
+  },[])
   return (
     <>
       <div className="container">

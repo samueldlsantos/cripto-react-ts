@@ -79,5 +79,5 @@ form {
 
 .submit:hover {
   cursor: pointer;
-  background-color: var(--primary)/2;
+  background-color: #0cb387;
 }
