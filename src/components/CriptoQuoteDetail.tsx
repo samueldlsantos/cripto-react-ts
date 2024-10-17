@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { useCripto } from "../hooks/useCripto"
-import { object } from "zod";
 
 const CriptoQuoteDetail = () => {
     const { result } = useCripto();

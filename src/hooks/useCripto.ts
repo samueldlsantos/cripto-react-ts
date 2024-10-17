@@ -41,7 +41,15 @@ export const useCripto = create<CriptoStore>()((set, get)=> ({
         console.log(criptoCurrency)
         const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptoCurrency}&tsyms=${currency}`
         try {
-            set((state)=> ({...state, loading:true}))
+            set((state)=> ({...state, 
+                            loading:true, 
+                            result: { IMAGEURL: '',
+                                    PRICE: '',
+                                    HIGHDAY: '',
+                                    LOWDAY: '',
+                                    CHANGEPCTDAY: '',
+                                    LASTUPDATE: '',} 
+                                }))
             const {data : {DISPLAY} }= await axios(url)
             const result = CryptoQuotePriceSchema.safeParse(DISPLAY[criptoCurrency][currency])
             if(result.success){
