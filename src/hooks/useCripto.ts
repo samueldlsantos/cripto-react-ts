@@ -39,11 +39,11 @@ export const useCripto = create<CriptoStore>()((set, get)=> ({
     fetchQuotePrice: async (currency, criptoCurrency) => {
         console.log(currency)
         console.log(criptoCurrency)
-        const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${currency}&tsyms=${criptoCurrency}`
+        const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptoCurrency}&tsyms=${currency}`
         try {
             set((state)=> ({...state, loading:true}))
             const {data : {DISPLAY} }= await axios(url)
-            const result = CryptoQuotePriceSchema.safeParse(DISPLAY[currency][criptoCurrency])
+            const result = CryptoQuotePriceSchema.safeParse(DISPLAY[criptoCurrency][currency])
             if(result.success){
                 set((state)=>({...state, result: result.data}))
                 console.log(get().result)

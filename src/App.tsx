@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import CriptoSearchForm from "./components/CriptoSearchForm"
 import { useCripto } from "./hooks/useCripto"
+import CriptoQuoteDetail from "./components/CriptoQuoteDetail";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
 
         <div className="content">
           <CriptoSearchForm />
+          <CriptoQuoteDetail />
         </div>
       </div>
     </>

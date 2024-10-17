@@ -91,6 +91,25 @@ form {
   border: none;
 }
 
+.detail {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.titlequote{
+  text-align: center;
+}
+
+.image {
+  width: 20rem;
+  height: auto;
+}
+
+.results p span {
+  font-weight: 700;
+}
+
 .loader {
   width: 60px;
   aspect-ratio: 1;
